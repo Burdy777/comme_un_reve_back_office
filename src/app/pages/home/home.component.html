@@ -1,0 +1,10 @@
+<div class="blog-list-container">
+    <div class="blog-list">
+      <div class="blog-card" *ngFor="let blog of blogs" (click)="viewDetails(blog.id)">
+        <img [src]="blog.imageUrl" alt="Image du blog" class="blog-image">
+        <h2 class="blog-title">{{ blog.title }}</h2>
+        <p class="blog-description">{{ blog.description | slice: 0:100 }}...</p>
+      </div>
+    </div>
+  </div>
+  
